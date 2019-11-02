@@ -44,12 +44,11 @@ class InstaAuth extends Component {
         .then(response => response.json())
         .then(json => {
           var user_idstr = JSON.stringify(json.user_id);
-          var access_tokenstr = JSON.stringify(json.access_token);
-
-          console.log(typeof user_idstr);
-
-          // let user_idint = Number(user_idstr) - 1;
-          // console.log(typeof user_idint);
+          var access_tokenstr = json.access_token;
+          //access_tokenstr = access_tokenstr.replace(/\"/g, ""));
+          console.log(access_tokenstr);
+          // user_idstr += 1;
+          // console.log(access_tokenstr);
 
           this.setState(
             {
